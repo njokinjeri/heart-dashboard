@@ -1,37 +1,37 @@
-name: Update GitHub Heart
+name: Update Heart Dashboard
 
 on:
   schedule:
-    - cron: '0 */6 * * *' # Runs every 6 hours
-  workflow_dispatch:      
-  push:
-    branches: [ main ]     
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repo
-        uses: actions/checkout@v4 
-
+      - uses: actions/checkout@v4 # Updated version
+      
       - name: Set up Python
-        uses: actions/setup-python@v5 
+        uses: actions/setup-python@v5 # Updated version
         with:
-          python-version: '3.12'     
-
-      - name: Install Dependencies
+          python-version: '3.9'
+          
+      - name: Install dependencies
         run: pip install requests
-
-      - name: Update Heart SVG
+        
+      - name: Update SVG
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
-          GH_USERNAME: ${{ github.repository_owner }}
+          GH_USERNAME: ${{ secrets.GH_USERNAME }}
         run: python src/main.py
-
+        
       - name: Commit and Push
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add heart.svg
-          git commit -m "Update heart contributions" || echo "No changes to commit"
+          git commit -m "Update heart activity" || exit 0
           git push
