@@ -1,88 +1,74 @@
-<svg width="750" height="480" viewBox="0 0 750 480" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="750" height="480" rx="16" fill="#0d1117"/>
+<svg width="800" height="640" viewBox="0 0 800 640" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="640" rx="20" fill="#0d1117"/>
   
-  <text x="375" y="45" fill="white" font-family="Arial" font-size="24" font-weight="bold" text-anchor="middle">My GitHub Contributions</text>
+  <text x="400" y="55" fill="white" font-family="Arial" font-size="26" font-weight="bold" text-anchor="middle">GitHub Activity Dashboard</text>
 
-  <g id="heart-grid" transform="translate(50, 95)">
-    <rect id="day_1" x="76" y="0" width="34" height="34" rx="7" fill="#2d8c63"/>
-    <rect id="day_2" x="114" y="0" width="34" height="34" rx="7" fill="#10b981"/>
-    <rect id="day_3" x="228" y="0" width="34" height="34" rx="7" fill="#10b981"/>
-    <rect id="day_4" x="266" y="0" width="34" height="34" rx="7" fill="#2d8c63"/>
-    <rect id="day_5" x="38" y="38" width="34" height="34" rx="7" fill="#10b981"/>
-    <rect id="day_6" x="76" y="38" width="34" height="34" rx="7" fill="#10b981"/>
-    <rect id="day_7" x="114" y="38" width="34" height="34" rx="7" fill="#10b981"/>
-    <rect id="day_8" x="152" y="38" width="34" height="34" rx="7" fill="#10b981"/>
-    <rect id="day_9" x="190" y="38" width="34" height="34" rx="7" fill="#10b981"/>
-    <rect id="day_10" x="228" y="38" width="34" height="34" rx="7" fill="#10b981"/>
-    <rect id="day_11" x="266" y="38" width="34" height="34" rx="7" fill="#10b981"/>
-    <rect id="day_12" x="304" y="38" width="34" height="34" rx="7" fill="#10b981"/>
-    <rect id="day_13" x="38" y="76" width="34" height="34" rx="7" fill="#2d8c63"/>
-    <rect id="day_14" x="76" y="76" width="34" height="34" rx="7" fill="#10b981"/>
-    <rect id="day_15" x="114" y="76" width="34" height="34" rx="7" fill="#2d8c63"/>
-    <rect id="day_16" x="152" y="76" width="34" height="34" rx="7" fill="#10b981"/>
-    <rect id="day_17" x="190" y="76" width="34" height="34" rx="7" fill="#10b981"/>
-    <rect id="day_18" x="228" y="76" width="34" height="34" rx="7" fill="#2d8c63"/>
-    <rect id="day_19" x="266" y="76" width="34" height="34" rx="7" fill="#10b981"/>
-    <rect id="day_20" x="304" y="76" width="34" height="34" rx="7" fill="#10b981"/>
-    <rect id="day_21" x="76" y="114" width="34" height="34" rx="7" fill="#10b981"/>
-    <rect id="day_22" x="114" y="114" width="34" height="34" rx="7" fill="#10b981"/>
-    <rect id="day_23" x="152" y="114" width="34" height="34" rx="7" fill="#10b981"/>
-    <rect id="day_24" x="190" y="114" width="34" height="34" rx="7" fill="#10b981"/>
-    <rect id="day_25" x="228" y="114" width="34" height="34" rx="7" fill="#2d8c63"/>
-    <rect id="day_26" x="266" y="114" width="34" height="34" rx="7" fill="#2d8c63"/>
-    <rect id="day_27" x="114" y="152" width="34" height="34" rx="7" fill="#10b981"/>
-    <rect id="day_28" x="152" y="152" width="34" height="34" rx="7" fill="#10b981"/>
-    <rect id="day_29" x="190" y="152" width="34" height="34" rx="7" fill="#1e1e1e"/>
-    <rect id="day_30" x="228" y="152" width="34" height="34" rx="7" fill="#1e1e1e"/>
-    <rect id="day_31" x="171" y="190" width="34" height="34" rx="7" fill="#1e1e1e"/>
+  <g id="heart-grid" transform="translate(60, 140)">
+    <rect id="day_1" x="42" y="0" width="36" height="36" rx="8" fill="#2d8c63"/>
+    <rect id="day_2" x="84" y="0" width="36" height="36" rx="8" fill="#10b981"/>
+    <rect id="day_3" x="210" y="0" width="36" height="36" rx="8" fill="#10b981"/>
+    <rect id="day_4" x="252" y="0" width="36" height="36" rx="8" fill="#2d8c63"/>
+    
+    <rect id="day_5" x="0" y="42" width="36" height="36" rx="8" fill="#10b981"/><rect id="day_6" x="42" y="42" width="36" height="36" rx="8" fill="#10b981"/><rect id="day_7" x="84" y="42" width="36" height="36" rx="8" fill="#10b981"/><rect id="day_8" x="126" y="42" width="36" height="36" rx="8" fill="#10b981"/><rect id="day_9" x="168" y="42" width="36" height="36" rx="8" fill="#10b981"/><rect id="day_10" x="210" y="42" width="36" height="36" rx="8" fill="#10b981"/><rect id="day_11" x="252" y="42" width="36" height="36" rx="8" fill="#10b981"/><rect id="day_12" x="294" y="42" width="36" height="36" rx="8" fill="#10b981"/>
+
+    <rect id="day_13" x="0" y="84" width="36" height="36" rx="8" fill="#2d8c63"/><rect id="day_14" x="42" y="84" width="36" height="36" rx="8" fill="#10b981"/><rect id="day_15" x="84" y="84" width="36" height="36" rx="8" fill="#2d8c63"/><rect id="day_16" x="126" y="84" width="36" height="36" rx="8" fill="#10b981"/><rect id="day_17" x="168" y="84" width="36" height="36" rx="8" fill="#10b981"/><rect id="day_18" x="210" y="84" width="36" height="36" rx="8" fill="#2d8c63"/><rect id="day_19" x="252" y="84" width="36" height="36" rx="8" fill="#10b981"/><rect id="day_20" x="294" y="84" width="36" height="36" rx="8" fill="#10b981"/>
+
+    <rect id="day_21" x="42" y="126" width="36" height="36" rx="8" fill="#10b981"/><rect id="day_22" x="84" y="126" width="36" height="36" rx="8" fill="#10b981"/><rect id="day_23" x="126" y="126" width="36" height="36" rx="8" fill="#10b981"/><rect id="day_24" x="168" y="126" width="36" height="36" rx="8" fill="#10b981"/><rect id="day_25" x="210" y="126" width="36" height="36" rx="8" fill="#2d8c63"/><rect id="day_26" x="252" y="126" width="36" height="36" rx="8" fill="#2d8c63"/>
+    
+    <rect id="day_27" x="84" y="168" width="36" height="36" rx="8" fill="#10b981"/><rect id="day_28" x="126" y="168" width="36" height="36" rx="8" fill="#10b981"/><rect id="day_29" x="168" y="168" width="36" height="36" rx="8" fill="#1e1e1e"/><rect id="day_30" x="210" y="168" width="36" height="36" rx="8" fill="#1e1e1e"/>
+
+    <rect id="day_31" x="147" y="210" width="36" height="36" rx="8" fill="#1e1e1e"/>
   </g>
 
-  <line x1="440" y1="90" x2="440" y2="350" stroke="#30363d" stroke-width="1.5"/>
+  <g transform="translate(60, 485)">
+    <rect x="0" y="0" width="12" height="12" rx="2" fill="#1e1e1e"/><text x="18" y="10" fill="#8b949e" font-family="Arial" font-size="10">None</text>
+    <rect x="60" y="0" width="12" height="12" rx="2" fill="#1a332a"/><text x="78" y="10" fill="#8b949e" font-family="Arial" font-size="10">Low</text>
+    <rect x="115" y="0" width="12" height="12" rx="2" fill="#2d8c63"/><text x="133" y="10" fill="#8b949e" font-family="Arial" font-size="10">Med</text>
+    <rect x="175" y="0" width="12" height="12" rx="2" fill="#10b981"/><text x="193" y="10" fill="#8b949e" font-family="Arial" font-size="10">High</text>
+  </g>
 
-  <g transform="translate(480, 100)">
-    <text x="0" y="0" fill="#8b949e" font-family="Arial" font-size="13" font-weight="bold" letter-spacing="1">LANGUAGE BREAKDOWN</text>
+  <line x1="440" y1="110" x2="440" y2="530" stroke="#30363d" stroke-width="1.5"/>
+
+  <g transform="translate(480, 140)">
+    <text x="0" y="0" fill="#8b949e" font-family="Arial" font-size="14" font-weight="bold" letter-spacing="1">LANGUAGE BREAKDOWN</text>
     
-    <g transform="translate(0, 40)">
-      <text id="lang_1_name" x="0" y="0" fill="white" font-family="Arial" font-size="15">CSS</text>
-      <text \% </text>
-      <rect x="0" y="10" width="220" height="6" rx="3" fill="#21262d"/>
-      <rect id="lang_1_bar" x="0" y="10" width="74" height="6" rx="3" fill="#F7DF1E"/>
+    <g transform="translate(0, 45)">
+      <text id="lang_1_name" x="0" y="0" fill="white" font-family="Arial" font-size="15" font-weight="bold">JavaScript</text>
+      <text id="lang_1_percent" x="250" y="0" fill="#8b949e" font-family="Arial" font-size="12" text-anchor="end">22%</text>
+      <rect x="0" y="10" width="250" height="6" rx="3" fill="#21262d"/><rect id="lang_1_bar" x="0" y="10" width="55" height="6" rx="3" fill="#f7df1e"/>
     </g>
 
-    <g transform="translate(0, 85)">
-      <text id="lang_2_name" x="0" y="0" fill="white" font-family="Arial" font-size="15">JavaScript</text>
-      <text S% </text>
-      <rect x="0" y="10" width="220" height="6" rx="3" fill="#21262d"/>
-      <rect id="lang_2_bar" x="0" y="10" width="50" height="6" rx="3" fill="#3178c6"/>
+    <g transform="translate(0, 95)">
+      <text id="lang_2_name" x="0" y="0" fill="white" font-family="Arial" font-size="15" font-weight="bold">TypeScript</text>
+      <text id="lang_2_percent" x="250" y="0" fill="#8b949e" font-family="Arial" font-size="12" text-anchor="end">15%</text>
+      <rect x="0" y="10" width="250" height="6" rx="3" fill="#21262d"/><rect id="lang_2_bar" x="0" y="10" width="37" height="6" rx="3" fill="#3178c6"/>
     </g>
 
-    <g transform="translate(0, 130)">
-      <text id="lang_3_name" x="0" y="0" fill="white" font-family="Arial" font-size="15">HTML</text>
-      <text Q% </text>
-      <rect x="0" y="10" width="220" height="6" rx="3" fill="#21262d"/>
-      <rect id="lang_3_bar" x="0" y="10" width="46" height="6" rx="3" fill="#3776ab"/>
+    <g transform="translate(0, 145)">
+      <text id="lang_3_name" x="0" y="0" fill="white" font-family="Arial" font-size="15" font-weight="bold">Python</text>
+      <text id="lang_3_percent" x="250" y="0" fill="#8b949e" font-family="Arial" font-size="12" text-anchor="end">4%</text>
+      <rect x="0" y="10" width="250" height="6" rx="3" fill="#21262d"/><rect id="lang_3_bar" x="0" y="10" width="10" height="6" rx="3" fill="#3776ab"/>
     </g>
 
-    <g transform="translate(0, 175)">
-      <text id="lang_4_name" x="0" y="0" fill="white" font-family="Arial" font-size="15">Other</text>
-      <text R% </text>
-      <rect x="0" y="10" width="220" height="6" rx="3" fill="#21262d"/>
-      <rect id="lang_4_bar" x="0" y="10" width="48" height="6" rx="3" fill="#6e7681"/>
+    <g transform="translate(0, 195)">
+      <text id="lang_4_name" x="0" y="0" fill="white" font-family="Arial" font-size="15" font-weight="bold">HTML/CSS</text>
+      <text id="lang_4_percent" x="250" y="0" fill="#8b949e" font-family="Arial" font-size="12" text-anchor="end">55%</text>
+      <rect x="0" y="10" width="250" height="6" rx="3" fill="#21262d"/><rect id="lang_4_bar" x="0" y="10" width="137" height="6" rx="3" fill="#e34c26"/>
     </g>
-
-    <line x1="0" y1="210" x2="220" y2="210" stroke="#30363d" stroke-width="1"/>
 
     <g transform="translate(0, 245)">
-      <text x="0" y="0" fill="#8b949e" font-family="Arial" font-size="12">Total contributions</text>
-      <text id="total_count">512</text>
+      <text id="lang_5_name" x="0" y="0" fill="white" font-family="Arial" font-size="15" font-weight="bold">Other</text>
+      <text id="lang_5_percent" x="250" y="0" fill="#8b949e" font-family="Arial" font-size="12" text-anchor="end">4%</text>
+      <rect x="0" y="10" width="250" height="6" rx="3" fill="#21262d"/><rect id="lang_5_bar" x="0" y="10" width="10" height="6" rx="3" fill="#6e7681"/>
+    </g>
+
+    <line x1="0" y1="290" x2="250" y2="290" stroke="#30363d" stroke-width="1"/>
+    
+    <g transform="translate(0, 325)">
+      <text x="0" y="0" fill="#8b949e" font-family="Arial" font-size="14">Contributions</text>
+      <text id="total_count" x="0" y="45" fill="white" font-family="Arial" font-size="52" font-weight="bold">514</text>
     </g>
   </g>
 
-  <g transform="translate(100, 350)">
-     <rect width="18" height="18" rx="5" fill="#1a332a" x="0" y="0"/> <text x="26" y="14" fill="#8b949e" font-family="Arial" font-size="12">Low</text>
-     <rect width="18" height="18" rx="5" fill="#2d8c63" x="75" y="0"/> <text x="101" y="14" fill="#8b949e" font-family="Arial" font-size="12">Med</text>
-     <rect width="18" height="18" rx="5" fill="#10b981" x="155" y="0"/> <text x="181" y="14" fill="#8b949e" font-family="Arial" font-size="12">High</text>
-  </g>
-
-  <text x="375" y="460" fill="#555" font-family="Arial" font-size="11" text-anchor="middle">Automated Dashboard • Updated March 2026</text>
+  <text id="footer_text" x="400" y="605" fill="#555" font-family="Arial" font-size="12" text-anchor="middle">Automated Dashboard • Resets Monthly: March 2026</text>
 </svg>

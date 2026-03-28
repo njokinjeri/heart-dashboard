@@ -3,37 +3,35 @@ import requests
 import datetime
 import re
 
-# Seasonal theme switcher
 def get_theme():
+    """Returns colors based on the current season."""
     month = datetime.datetime.now().month
-    if 3 <= month <= 5: # Spring
-        return {
-            "low": "#1a332a", 
-            "med": "#2d8c63", 
-            "high": "#10b981", 
-            "empty": "#1e1e1e"
+    # March-May (Spring): Green | June-Aug (Summer): Amber | Sept-Nov (Autumn): Orange | Dec-Feb (Winter): Blue
+    if 3 <= month <= 5: return {
+        "low": "#1a332a", 
+        "med": "#2d8c63", 
+        "high": "#10b981", 
+        "empty": "#1e1e1e"
         }
-    if 6 <= month <= 8: # Summer
-        return {
-            "low": "#3d3014",
-            "med": "#b45309", 
-            "high": "#f59e0b",
-            "empty": "#1e1e1e"
+    if 6 <= month <= 8: return {
+        "low": "#3d3014", 
+        "med": "#b45309", 
+        "high": "#f59e0b", 
+        "empty": "#1e1e1e"
         }
-    if 9 <= month <= 11: # Autumn
-        return {
-            "low": "#3d1e14", 
-            "med": "#9a3412", 
-            "high": "#ea580c", 
-            "empty": "#1e1e1e"
+    if 9 <= month <= 11: return {
+        "low": "#3d1e14", 
+        "med": "#9a3412", 
+        "high": "#ea580c", 
+        "empty": "#1e1e1e"
         }
     return {
         "low": "#1e293b", 
         "med": "#3b82f6", 
         "high": "#60a5fa", 
         "empty": "#1e1e1e"
-        } # Winter
-    
+        }
+
 def fetch_github_data(token, username):
     url = "https://api.github.com/graphql"
     headers = {"Authorization": f"Bearer {token}"}
@@ -51,7 +49,7 @@ def fetch_github_data(token, username):
         }
         repositories(first: 100, orderBy: {field: UPDATED_AT, direction: DESC}) {
           nodes {
-            languages(first: 5, orderBy: {field: SIZE, direction: DESC}) {
+            languages(first: 10, orderBy: {field: SIZE, direction: DESC}) {
               edges { size node { name } }
             }
           }
@@ -62,55 +60,75 @@ def fetch_github_data(token, username):
     response = requests.post(url, json={'query': query, 'variables': {'login': username, 'from': start_of_month}}, headers=headers)
     res_data = response.json()['data']['user']
     
-    weeks = res_data['contributionsCollection']['contributionCalendar']['weeks']
-    daily_counts = [day['contributionCount'] for week in weeks for day in week['contributionDays']]
-    
+    # Process Language Statistics
     lang_stats = {}
     for repo in res_data['repositories']['nodes']:
-        for edge in repo['languages']['edges']:
-            name = edge['node']['name']
-            lang_stats[name] = lang_stats.get(name, 0) + edge['size']
-    
+        for e in repo['languages']['edges']:
+            name = e['node']['name']
+            lang_stats[name] = lang_stats.get(name, 0) + e['size']
+
+    html_css_sum = lang_stats.pop("HTML", 0) + lang_stats.pop("CSS", 0)
+    if html_css_sum > 0:
+        lang_stats["HTML/CSS"] = html_css_sum
+
     total_size = sum(lang_stats.values())
-    sorted_langs = sorted(lang_stats.items(), key=lambda x: x[1], reverse=True)[:3]
+    priority_order = ["JavaScript", "TypeScript", "Python", "HTML/CSS"]
     
-    formatted_langs = []
-    for name, size in sorted_langs:
-        p = round((size / total_size) * 100) if total_size > 0 else 0
-        formatted_langs.append({"name": name, "percent": p})
+    raw_data = []
+    for name in priority_order:
+        size = lang_stats.pop(name, 0)
+        raw_p = (size / total_size) * 100 if total_size > 0 else 0
+        raw_data.append({"name": name, "raw": raw_p})
+    
+    remaining_size = sum(lang_stats.values())
+    other_p = (remaining_size / total_size) * 100 if total_size > 0 else 0
+    raw_data.append({"name": "Other", "raw": other_p})
+
+    formatted = [{"name": d["name"], "raw": d["raw"], "percent": int(d["raw"]), "remainder": d["raw"] - int(d["raw"])} for d in raw_data]
+    
+    diff = 100 - sum(d["percent"] for d in formatted)
+    formatted.sort(key=lambda x: x["remainder"], reverse=True)
+    for i in range(diff):
+        formatted[i]["percent"] += 1
         
-    other_p = 100 - sum(l["percent"] for l in formatted_langs)
-    if other_p > 0:
-        formatted_langs.append({"name": "Other", "percent": other_p})
+    order_map = {name: i for i, name in enumerate(priority_order + ["Other"])}
+    formatted.sort(key=lambda x: order_map[x["name"]])
+
+    daily_counts = [d['contributionCount'] for w in res_data['contributionsCollection']['contributionCalendar']['weeks'] for d in w['contributionDays']]
 
     return {
         "daily": daily_counts[:31],
         "total": res_data['contributionsCollection']['contributionCalendar']['totalContributions'],
-        "langs": formatted_langs
+        "langs": formatted
     }
 
 def update_svg(data):
     theme = get_theme()
+    now = datetime.datetime.now()
+    
     with open('src/template.svg', 'r') as f:
         svg = f.read()
 
-    # Update Heart Colors
-    for i, count in enumerate(data['daily']):
+    for i in range(1, 32):
+        count = data['daily'][i-1] if i-1 < len(data['daily']) else 0
         color = theme['empty']
         if count > 0:
             color = theme['low'] if count < 3 else (theme['med'] if count < 7 else theme['high'])
-        svg = re.sub(f'(id="day_{i+1}".*?fill=")#1e1e1e"', f'\\1{color}"', svg)
+        svg = re.sub(f'(id="day_{i}".*?fill=")#1e1e1e"', r'\g<1>' + color + '"', svg)
 
-    # Update Languages (Multipler set to 2.2 for 220px bars)
     for i, lang in enumerate(data['langs']):
         idx = i + 1
-        svg = re.sub(fr'(id="lang_{idx}_bar".*?)\s+width="\d+"', fr'\1 width="{int(lang["percent"] * 2.2)}"', svg)
-        svg = re.sub(fr'(id="lang_{idx}_percent".*?>)[\d%]+(<)', fr'\1{lang["percent"]}% \2', svg)
-        svg = re.sub(fr'(id="lang_{idx}_name".*?>)[^<]+(<)', fr'\1{lang["name"]}\2', svg)
+        width = int((lang["percent"] / 100) * 250) if lang["percent"] > 0 else 0
+        
+        svg = re.sub(fr'(id="lang_{idx}_name".*?>)[^<]*(</text>)', fr'\g<1>{lang["name"]}\g<2>', svg)
+        svg = re.sub(fr'(id="lang_{idx}_percent".*?>)[^<]*(</text>)', fr'\g<1>{lang["percent"]}%\g<2>', svg)
+        svg = re.sub(fr'(id="lang_{idx}_bar".*?width=")\d+(")', fr'\g<1>{width}\g<2>', svg)
 
-    # Update Total Count (target specific ID)
-    svg = re.sub(r'id="total_count".*?>0</text>', f'id="total_count">{data["total"]}</text>', svg)
-    svg = svg.replace("March 2026", datetime.datetime.now().strftime("%B %Y"))
+    svg = re.sub(r'(id="total_count".*?>)0(</text>)', fr'\g<1>{data["total"]}\g<2>', svg)
+    
+    current_month = now.strftime('%B %Y')
+    footer_text = f"Automated Dashboard • Resets Monthly: {current_month}"
+    svg = re.sub(r'(id="footer_text".*?>)[^<]*(</text>)', fr'\g<1>{footer_text}\g<2>', svg)
 
     with open('heart.svg', 'w') as f:
         f.write(svg)
@@ -118,4 +136,5 @@ def update_svg(data):
 if __name__ == "__main__":
     TOKEN = os.getenv("GH_TOKEN")
     USER = os.getenv("GH_USERNAME")
-    update_svg(fetch_github_data(TOKEN, USER))
+    if TOKEN and USER:
+        update_svg(fetch_github_data(TOKEN, USER))
