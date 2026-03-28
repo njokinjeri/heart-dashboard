@@ -1,70 +1,88 @@
-<svg width="600" height="420" viewBox="0 0 600 420" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="600" height="420" rx="16" fill="#121212"/>
+<svg width="750" height="480" viewBox="0 0 750 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="750" height="480" rx="16" fill="#0d1117"/>
   
-  <text x="300" y="45" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="22" font-weight="600">My GitHub Contributions</text>
+  <text x="375" y="45" fill="white" font-family="Arial" font-size="24" font-weight="bold" text-anchor="middle">My GitHub Contributions</text>
 
-  <g transform="translate(100, 85)">
-    <rect id="day_26" x="30" y="0" width="28" height="28" rx="7" fill="#1e1e1e" stroke="#2a2a2a"/>
-    <rect id="day_27" x="62" y="0" width="28" height="28" rx="7" fill="#1e1e1e" stroke="#2a2a2a"/>
-    <rect id="day_28" x="126" y="0" width="28" height="28" rx="7" fill="#1e1e1e" stroke="#2a2a2a"/>
-    <rect id="day_29" x="158" y="0" width="28" height="28" rx="7" fill="#1e1e1e" stroke="#2a2a2a"/>
-
-    <rect id="day_21" x="0" y="32" width="28" height="28" rx="7" fill="#1e1e1e" stroke="#2a2a2a"/>
-    <rect id="day_22" x="32" y="32" width="28" height="28" rx="7" fill="#1e1e1e" stroke="#2a2a2a"/>
-    <rect id="day_23" x="64" y="32" width="28" height="28" rx="7" fill="#1e1e1e" stroke="#2a2a2a"/>
-    <rect id="day_24" x="96" y="32" width="28" height="28" rx="7" fill="#1e1e1e" stroke="#2a2a2a"/>
-    <rect id="day_25" x="128" y="32" width="28" height="28" rx="7" fill="#1e1e1e" stroke="#2a2a2a"/>
-    <rect id="day_30" x="160" y="32" width="28" height="28" rx="7" fill="#1e1e1e" stroke="#2a2a2a"/>
-    <rect id="day_31" x="192" y="32" width="28" height="28" rx="7" fill="#1e1e1e" stroke="#2a2a2a"/>
-
-    <rect id="day_14" x="0" y="64" width="28" height="28" rx="7" fill="#1e1e1e" stroke="#2a2a2a"/>
-    <rect id="day_15" x="32" y="64" width="28" height="28" rx="7" fill="#1e1e1e" stroke="#2a2a2a"/>
-    <rect id="day_16" x="64" y="64" width="28" height="28" rx="7" fill="#1e1e1e" stroke="#2a2a2a"/>
-    <rect id="day_17" x="96" y="64" width="28" height="28" rx="7" fill="#1e1e1e" stroke="#2a2a2a"/>
-    <rect id="day_18" x="128" y="64" width="28" height="28" rx="7" fill="#1e1e1e" stroke="#2a2a2a"/>
-    <rect id="day_19" x="160" y="64" width="28" height="28" rx="7" fill="#1e1e1e" stroke="#2a2a2a"/>
-    <rect id="day_20" x="192" y="64" width="28" height="28" rx="7" fill="#1e1e1e" stroke="#2a2a2a"/>
-
-    <rect id="day_8" x="32" y="96" width="28" height="28" rx="7" fill="#1e1e1e" stroke="#2a2a2a"/>
-    <rect id="day_9" x="64" y="96" width="28" height="28" rx="7" fill="#1e1e1e" stroke="#2a2a2a"/>
-    <rect id="day_10" x="96" y="96" width="28" height="28" rx="7" fill="#1e1e1e" stroke="#2a2a2a"/>
-    <rect id="day_11" x="128" y="96" width="28" height="28" rx="7" fill="#1e1e1e" stroke="#2a2a2a"/>
-    <rect id="day_12" x="160" y="96" width="28" height="28" rx="7" fill="#1e1e1e" stroke="#2a2a2a"/>
-    <rect id="day_13" x="192" y="96" width="28" height="28" rx="7" fill="#1e1e1e" stroke="#2a2a2a"/>
-
-    <rect id="day_4" x="64" y="128" width="28" height="28" rx="7" fill="#1e1e1e" stroke="#2a2a2a"/>
-    <rect id="day_5" x="96" y="128" width="28" height="28" rx="7" fill="#1e1e1e" stroke="#2a2a2a"/>
-    <rect id="day_6" x="128" y="128" width="28" height="28" rx="7" fill="#1e1e1e" stroke="#2a2a2a"/>
-    <rect id="day_7" x="150" y="128" width="28" height="28" rx="7" fill="#1e1e1e" stroke="#2a2a2a"/>
-
-    <rect id="day_2" x="96" y="160" width="28" height="28" rx="7" fill="#1e1e1e" stroke="#2a2a2a"/>
-    <rect id="day_3" x="128" y="160" width="28" height="28" rx="7" fill="#1e1e1e" stroke="#2a2a2a"/>
-
-    <rect id="day_1" x="112" y="192" width="28" height="28" rx="7" fill="#1e1e1e" stroke="#2a2a2a"/>
+  <g id="heart-grid" transform="translate(50, 95)">
+    <rect id="day_1" x="76" y="0" width="34" height="34" rx="7" fill="#1e1e1e"/>
+    <rect id="day_2" x="114" y="0" width="34" height="34" rx="7" fill="#1e1e1e"/>
+    <rect id="day_3" x="228" y="0" width="34" height="34" rx="7" fill="#1e1e1e"/>
+    <rect id="day_4" x="266" y="0" width="34" height="34" rx="7" fill="#1e1e1e"/>
+    <rect id="day_5" x="38" y="38" width="34" height="34" rx="7" fill="#1e1e1e"/>
+    <rect id="day_6" x="76" y="38" width="34" height="34" rx="7" fill="#1e1e1e"/>
+    <rect id="day_7" x="114" y="38" width="34" height="34" rx="7" fill="#1e1e1e"/>
+    <rect id="day_8" x="152" y="38" width="34" height="34" rx="7" fill="#1e1e1e"/>
+    <rect id="day_9" x="190" y="38" width="34" height="34" rx="7" fill="#1e1e1e"/>
+    <rect id="day_10" x="228" y="38" width="34" height="34" rx="7" fill="#1e1e1e"/>
+    <rect id="day_11" x="266" y="38" width="34" height="34" rx="7" fill="#1e1e1e"/>
+    <rect id="day_12" x="304" y="38" width="34" height="34" rx="7" fill="#1e1e1e"/>
+    <rect id="day_13" x="38" y="76" width="34" height="34" rx="7" fill="#1e1e1e"/>
+    <rect id="day_14" x="76" y="76" width="34" height="34" rx="7" fill="#1e1e1e"/>
+    <rect id="day_15" x="114" y="76" width="34" height="34" rx="7" fill="#1e1e1e"/>
+    <rect id="day_16" x="152" y="76" width="34" height="34" rx="7" fill="#1e1e1e"/>
+    <rect id="day_17" x="190" y="76" width="34" height="34" rx="7" fill="#1e1e1e"/>
+    <rect id="day_18" x="228" y="76" width="34" height="34" rx="7" fill="#1e1e1e"/>
+    <rect id="day_19" x="266" y="76" width="34" height="34" rx="7" fill="#1e1e1e"/>
+    <rect id="day_20" x="304" y="76" width="34" height="34" rx="7" fill="#1e1e1e"/>
+    <rect id="day_21" x="76" y="114" width="34" height="34" rx="7" fill="#1e1e1e"/>
+    <rect id="day_22" x="114" y="114" width="34" height="34" rx="7" fill="#1e1e1e"/>
+    <rect id="day_23" x="152" y="114" width="34" height="34" rx="7" fill="#1e1e1e"/>
+    <rect id="day_24" x="190" y="114" width="34" height="34" rx="7" fill="#1e1e1e"/>
+    <rect id="day_25" x="228" y="114" width="34" height="34" rx="7" fill="#1e1e1e"/>
+    <rect id="day_26" x="266" y="114" width="34" height="34" rx="7" fill="#1e1e1e"/>
+    <rect id="day_27" x="114" y="152" width="34" height="34" rx="7" fill="#1e1e1e"/>
+    <rect id="day_28" x="152" y="152" width="34" height="34" rx="7" fill="#1e1e1e"/>
+    <rect id="day_29" x="190" y="152" width="34" height="34" rx="7" fill="#1e1e1e"/>
+    <rect id="day_30" x="228" y="152" width="34" height="34" rx="7" fill="#1e1e1e"/>
+    <rect id="day_31" x="171" y="190" width="34" height="34" rx="7" fill="#1e1e1e"/>
   </g>
 
-  <g transform="translate(110, 315)">
-    <rect width="14" height="14" rx="4" fill="#1a332a" /> <text x="22" y="12" fill="#666666" font-family="Arial" font-size="12">Low</text>
+  <line x1="440" y1="90" x2="440" y2="350" stroke="#30363d" stroke-width="1.5"/>
+
+  <g transform="translate(480, 100)">
+    <text x="0" y="0" fill="#8b949e" font-family="Arial" font-size="13" font-weight="bold" letter-spacing="1">LANGUAGE BREAKDOWN</text>
     
-    <rect x="65" width="14" height="14" rx="4" fill="#2d8c63" /> <text x="87" y="12" fill="#666666" font-family="Arial" font-size="12">Med</text>
-    
-    <rect x="130" width="14" height="14" rx="4" fill="#10b981" /> <text x="152" y="12" fill="#666666" font-family="Arial" font-size="12">High</text>
+    <g transform="translate(0, 40)">
+      <text id="lang_1_name" x="0" y="0" fill="white" font-family="Arial" font-size="15">JavaScript</text>
+      <text id="lang_1_percent" x="220" y="0" fill="#8b949e" font-family="Arial" font-size="12" text-anchor="end">0%</text>
+      <rect x="0" y="10" width="220" height="6" rx="3" fill="#21262d"/>
+      <rect id="lang_1_bar" x="0" y="10" width="0" height="6" rx="3" fill="#F7DF1E"/>
+    </g>
+
+    <g transform="translate(0, 85)">
+      <text id="lang_2_name" x="0" y="0" fill="white" font-family="Arial" font-size="15">TypeScript</text>
+      <text id="lang_2_percent" x="220" y="0" fill="#8b949e" font-family="Arial" font-size="12" text-anchor="end">0%</text>
+      <rect x="0" y="10" width="220" height="6" rx="3" fill="#21262d"/>
+      <rect id="lang_2_bar" x="0" y="10" width="0" height="6" rx="3" fill="#3178c6"/>
+    </g>
+
+    <g transform="translate(0, 130)">
+      <text id="lang_3_name" x="0" y="0" fill="white" font-family="Arial" font-size="15">Python</text>
+      <text id="lang_3_percent" x="220" y="0" fill="#8b949e" font-family="Arial" font-size="12" text-anchor="end">0%</text>
+      <rect x="0" y="10" width="220" height="6" rx="3" fill="#21262d"/>
+      <rect id="lang_3_bar" x="0" y="10" width="0" height="6" rx="3" fill="#3776ab"/>
+    </g>
+
+    <g transform="translate(0, 175)">
+      <text id="lang_4_name" x="0" y="0" fill="white" font-family="Arial" font-size="15">Other</text>
+      <text id="lang_4_percent" x="220" y="0" fill="#8b949e" font-family="Arial" font-size="12" text-anchor="end">0%</text>
+      <rect x="0" y="10" width="220" height="6" rx="3" fill="#21262d"/>
+      <rect id="lang_4_bar" x="0" y="10" width="0" height="6" rx="3" fill="#6e7681"/>
+    </g>
+
+    <line x1="0" y1="210" x2="220" y2="210" stroke="#30363d" stroke-width="1"/>
+
+    <g transform="translate(0, 245)">
+      <text x="0" y="0" fill="#8b949e" font-family="Arial" font-size="12">Total contributions</text>
+      <text id="total_count" x="0" y="42" fill="white" font-family="Arial" font-size="44" font-weight="bold">0</text>
+    </g>
   </g>
 
-  <g transform="translate(365, 90)">
-    <text fill="#666" font-family="Arial" font-size="11" font-weight="bold" letter-spacing="1">LANGUAGE BREAKDOWN</text>
-    
-    <text y="35" fill="#f0f0f0" font-family="Arial" font-size="14">JavaScript</text>
-    <rect y="45" width="180" height="6" rx="3" fill="#222"/>
-    <rect id="lang_1_bar" width="110" y="45" height="6" rx="3" fill="#F7DF1E"/>
-
-    <text y="90" fill="#f0f0f0" font-family="Arial" font-size="14">Python</text>
-    <rect y="100" width="180" height="6" rx="3" fill="#222"/>
-    <rect id="lang_2_bar" width="70" y="100" height="6" rx="3" fill="#3776AB"/>
-    
-    <text y="190" fill="#666" font-family="Arial" font-size="12">Total contributions</text>
-    <text id="total_count" y="220" x="0" fill="#ffffff" font-family="Arial" font-size="28" font-weight="bold">0</text>
+  <g transform="translate(100, 350)">
+     <rect width="18" height="18" rx="5" fill="#1a332a" x="0" y="0"/> <text x="26" y="14" fill="#8b949e" font-family="Arial" font-size="12">Low</text>
+     <rect width="18" height="18" rx="5" fill="#2d8c63" x="75" y="0"/> <text x="101" y="14" fill="#8b949e" font-family="Arial" font-size="12">Med</text>
+     <rect width="18" height="18" rx="5" fill="#10b981" x="155" y="0"/> <text x="181" y="14" fill="#8b949e" font-family="Arial" font-size="12">High</text>
   </g>
 
-  <text id="footer_text" x="300" y="395" text-anchor="middle" fill="#444444" font-family="Arial" font-size="11">Resets Monthly (Current Month: March 2026)</text>
+  <text x="375" y="460" fill="#555" font-family="Arial" font-size="11" text-anchor="middle">Automated Dashboard • Updated March 2026</text>
 </svg>
