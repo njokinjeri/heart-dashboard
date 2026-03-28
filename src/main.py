@@ -110,7 +110,7 @@ def update_svg(data):
 
     for i, lang in enumerate(data['langs']):
         svg = svg.replace(f'JavaScript' if i==0 else 'Python', lang['name'])
-        svg = re.sub(f'(id="lang_{i+1}_bar".*?width=")\d+"', f'\\1{int(lang["percent"] * 1.8)}"', svg)
+        svg = re.sub(fr'(id="lang_{i+1}_bar".*?width=")\d+"', f'\\1{int(lang["percent"] * 1.8)}"', svg)
         svg = svg.replace('35%' if i==0 else '25%', f"{lang['percent']}%")
 
     svg = svg.replace('>0</text>', f">{data['total']}</text>")
