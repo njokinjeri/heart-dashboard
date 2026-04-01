@@ -131,8 +131,14 @@ def fetch_github_data(token, username):
     print(f"   Daily counts: {daily_counts[:10]}... (showing first 10)")
     print(f"   Total contributions: {res_data['contributionsCollection']['contributionCalendar']['totalContributions']}")
     
+    # Pad with zeros for days that haven't occurred yet
+    days_in_current_month = (now.replace(day=1) + datetime.timedelta(days=32)).replace(day=1) - datetime.timedelta(days=1)
+    days_in_current_month = days_in_current_month.day
+    padded_daily = daily_counts + [0] * (days_in_current_month - len(daily_counts))
+    print(f"   After padding: {len(padded_daily)} days (full month)")
+    
     return {
-        "daily": daily_counts,
+        "daily": padded_daily,
         "total": res_data['contributionsCollection']['contributionCalendar']['totalContributions'],
         "langs": formatted
     }
