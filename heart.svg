@@ -9,7 +9,7 @@
     <rect id="day_3" x="210" y="0" width="36" height="36" rx="8" fill="#1a332a"/>
     <rect id="day_4" x="252" y="0" width="36" height="36" rx="8" fill="#2d8c63"/>
     
-    <rect id="day_5" x="0" y="42" width="36" height="36" rx="8" fill="#1a332a"/><rect id="day_6" x="42" y="42" width="36" height="36" rx="8" fill="#1a332a"/><rect id="day_7" x="84" y="42" width="36" height="36" rx="8" fill="#1e1e1e"/><rect id="day_8" x="126" y="42" width="36" height="36" rx="8" fill="#1e1e1e"/><rect id="day_9" x="168" y="42" width="36" height="36" rx="8" fill="#1a332a"/><rect id="day_10" x="210" y="42" width="36" height="36" rx="8" fill="#1e1e1e"/><rect id="day_11" x="252" y="42" width="36" height="36" rx="8" fill="#1e1e1e"/><rect id="day_12" x="294" y="42" width="36" height="36" rx="8" fill="#1e1e1e"/>
+    <rect id="day_5" x="0" y="42" width="36" height="36" rx="8" fill="#1a332a"/><rect id="day_6" x="42" y="42" width="36" height="36" rx="8" fill="#1a332a"/><rect id="day_7" x="84" y="42" width="36" height="36" rx="8" fill="#1e1e1e"/><rect id="day_8" x="126" y="42" width="36" height="36" rx="8" fill="#1e1e1e"/><rect id="day_9" x="168" y="42" width="36" height="36" rx="8" fill="#10b981"/><rect id="day_10" x="210" y="42" width="36" height="36" rx="8" fill="#1e1e1e"/><rect id="day_11" x="252" y="42" width="36" height="36" rx="8" fill="#1e1e1e"/><rect id="day_12" x="294" y="42" width="36" height="36" rx="8" fill="#1e1e1e"/>
 
     <rect id="day_13" x="0" y="84" width="36" height="36" rx="8" fill="#1e1e1e"/><rect id="day_14" x="42" y="84" width="36" height="36" rx="8" fill="#1e1e1e"/><rect id="day_15" x="84" y="84" width="36" height="36" rx="8" fill="#1e1e1e"/><rect id="day_16" x="126" y="84" width="36" height="36" rx="8" fill="#1e1e1e"/><rect id="day_17" x="168" y="84" width="36" height="36" rx="8" fill="#1e1e1e"/><rect id="day_18" x="210" y="84" width="36" height="36" rx="8" fill="#1e1e1e"/><rect id="day_19" x="252" y="84" width="36" height="36" rx="8" fill="#1e1e1e"/><rect id="day_20" x="294" y="84" width="36" height="36" rx="8" fill="#1e1e1e"/>
 
@@ -66,7 +66,7 @@
     
     <g transform="translate(0, 325)">
       <text x="0" y="0" fill="#8b949e" font-family="Arial" font-size="14">Contributions</text>
-      <text id="total_count" x="0" y="45" fill="white" font-family="Arial" font-size="52" font-weight="bold">16</text>
+      <text id="total_count" x="0" y="45" fill="white" font-family="Arial" font-size="52" font-weight="bold">31</text>
     </g>
   </g>
 
