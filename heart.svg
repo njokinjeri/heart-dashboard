@@ -17,7 +17,7 @@
     
     <rect id="day_27" x="84" y="168" width="36" height="36" rx="8" fill="#10b981"/><rect id="day_28" x="126" y="168" width="36" height="36" rx="8" fill="#10b981"/><rect id="day_29" x="168" y="168" width="36" height="36" rx="8" fill="#2d8c63"/><rect id="day_30" x="210" y="168" width="36" height="36" rx="8" fill="#1e1e1e"/>
 
-    <rect id="day_31" x="147" y="210" width="36" height="36" rx="8" fill="#1e1e1e"/>
+    <rect id="day_31" x="147" y="210" width="36" height="36" rx="8" fill="#2d8c63"/>
   </g>
 
   <g transform="translate(60, 485)">
@@ -66,7 +66,7 @@
     
     <g transform="translate(0, 325)">
       <text x="0" y="0" fill="#8b949e" font-family="Arial" font-size="14">Contributions</text>
-      <text id="total_count" x="0" y="45" fill="white" font-family="Arial" font-size="52" font-weight="bold">192</text>
+      <text id="total_count" x="0" y="45" fill="white" font-family="Arial" font-size="52" font-weight="bold">197</text>
     </g>
   </g>
 
