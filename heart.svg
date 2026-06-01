@@ -34,14 +34,14 @@
     
     <g transform="translate(0, 45)">
       <text id="lang_1_name" x="0" y="0" fill="white" font-family="Arial" font-size="15" font-weight="bold">JavaScript</text>
-      <text id="lang_1_percent" x="250" y="0" fill="#8b949e" font-family="Arial" font-size="12" text-anchor="end">14%</text>
-      <rect x="0" y="10" width="250" height="6" rx="3" fill="#21262d"/><rect id="lang_1_bar" x="0" y="10" width="35" height="6" rx="3" fill="#f7df1e"/>
+      <text id="lang_1_percent" x="250" y="0" fill="#8b949e" font-family="Arial" font-size="12" text-anchor="end">13%</text>
+      <rect x="0" y="10" width="250" height="6" rx="3" fill="#21262d"/><rect id="lang_1_bar" x="0" y="10" width="32" height="6" rx="3" fill="#f7df1e"/>
     </g>
 
     <g transform="translate(0, 95)">
       <text id="lang_2_name" x="0" y="0" fill="white" font-family="Arial" font-size="15" font-weight="bold">TypeScript</text>
-      <text id="lang_2_percent" x="250" y="0" fill="#8b949e" font-family="Arial" font-size="12" text-anchor="end">47%</text>
-      <rect x="0" y="10" width="250" height="6" rx="3" fill="#21262d"/><rect id="lang_2_bar" x="0" y="10" width="117" height="6" rx="3" fill="#3178c6"/>
+      <text id="lang_2_percent" x="250" y="0" fill="#8b949e" font-family="Arial" font-size="12" text-anchor="end">49%</text>
+      <rect x="0" y="10" width="250" height="6" rx="3" fill="#21262d"/><rect id="lang_2_bar" x="0" y="10" width="122" height="6" rx="3" fill="#3178c6"/>
     </g>
 
     <g transform="translate(0, 145)">
@@ -52,8 +52,8 @@
 
     <g transform="translate(0, 195)">
       <text id="lang_4_name" x="0" y="0" fill="white" font-family="Arial" font-size="15" font-weight="bold">HTML/CSS</text>
-      <text id="lang_4_percent" x="250" y="0" fill="#8b949e" font-family="Arial" font-size="12" text-anchor="end">34%</text>
-      <rect x="0" y="10" width="250" height="6" rx="3" fill="#21262d"/><rect id="lang_4_bar" x="0" y="10" width="85" height="6" rx="3" fill="#e34c26"/>
+      <text id="lang_4_percent" x="250" y="0" fill="#8b949e" font-family="Arial" font-size="12" text-anchor="end">33%</text>
+      <rect x="0" y="10" width="250" height="6" rx="3" fill="#21262d"/><rect id="lang_4_bar" x="0" y="10" width="82" height="6" rx="3" fill="#e34c26"/>
     </g>
 
     <g transform="translate(0, 245)">
@@ -66,7 +66,7 @@
     
     <g transform="translate(0, 325)">
       <text x="0" y="0" fill="#8b949e" font-family="Arial" font-size="14">Contributions</text>
-      <text id="total_count" x="0" y="45" fill="white" font-family="Arial" font-size="52" font-weight="bold">9</text>
+      <text id="total_count" x="0" y="45" fill="white" font-family="Arial" font-size="52" font-weight="bold">14</text>
     </g>
   </g>
 
