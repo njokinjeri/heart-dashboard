@@ -2,7 +2,11 @@ name: Update Heart Dashboard
 
 on:
   schedule:
-    - cron: "0 */6 * * *"
+    # 21:00 UTC = 00:00 EAT (Midnight)
+    # 03:00 UTC = 06:00 EAT (Morning)
+    # 09:00 UTC = 12:00 EAT (Noon)
+    # 15:00 UTC = 18:00 EAT (Evening)
+    - cron: "0 3,9,15,21 * * *"
   workflow_dispatch:
 
 permissions:
@@ -26,6 +30,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           GH_USERNAME: ${{ secrets.GH_USERNAME }}
+          TZ: 'Africa/Nairobi' 
         run: python src/main.py
         
       - name: Commit and Push
@@ -35,7 +40,6 @@ jobs:
           
           git add heart.svg
           
-          # Check if heart.svg actually changed before committing
           if git diff --staged --quiet heart.svg; then
             echo "No changes in activity. Skipping commit."
           else
