@@ -44,7 +44,7 @@ def fetch_github_data(token, username):
         contributionsCollection(from: $from) {
           contributionCalendar {
             totalContributions
-            weeks { contributionDays { contributionCount } }
+            weeks { contributionDays { date contributionCount } }
           }
         }
         repositories(first: 100, orderBy: {field: UPDATED_AT, direction: DESC}) {
@@ -58,6 +58,8 @@ def fetch_github_data(token, username):
     }
     """
     response = requests.post(url, json={'query': query, 'variables': {'login': username, 'from': start_of_month}}, headers=headers)
+    if response.status_code != 200:
+        raise Exception(f"GitHub API error {response.status_code}: {response.text}")
     res_data = response.json()['data']['user']
     
     # Process Language Statistics
@@ -94,13 +96,32 @@ def fetch_github_data(token, username):
     order_map = {name: i for i, name in enumerate(priority_order + ["Other"])}
     formatted.sort(key=lambda x: order_map[x["name"]])
 
-    daily_counts = [d['contributionCount'] for w in res_data['contributionsCollection']['contributionCalendar']['weeks'] for d in w['contributionDays']]
+    current_month = now.month
+    current_year = now.year
+    daily_counts = []
+    for w in res_data['contributionsCollection']['contributionCalendar']['weeks']:
+        for d in w['contributionDays']:
+            date_obj = datetime.datetime.strptime(d['date'], "%Y-%m-%d")
+            if date_obj.month == current_month and date_obj.year == current_year:
+                daily_counts.append(d['contributionCount'])
+
+    # Current streak: consecutive days with contributions working backwards
+    today = now.day
+    actual_days = daily_counts[:today]
+    streak = 0
+    for count in reversed(actual_days):
+        if count > 0:
+            streak += 1
+        else:
+            break
 
     return {
-        "daily": daily_counts[:31],
+        "daily": daily_counts,
         "total": res_data['contributionsCollection']['contributionCalendar']['totalContributions'],
+        "streak": streak,
         "langs": formatted
     }
+    
 
 def update_svg(data):
     theme = get_theme()
@@ -116,6 +137,12 @@ def update_svg(data):
             color = theme['low'] if count < 3 else (theme['med'] if count < 7 else theme['high'])
         svg = re.sub(f'(id="day_{i}".*?fill=")#1e1e1e"', r'\g<1>' + color + '"', svg)
 
+    # Sync legend colors to current season
+    svg = re.sub(r'(id="legend_empty".*?fill=")#[0-9a-fA-F]{6}"', r'\g<1>' + theme['empty'] + '"', svg)
+    svg = re.sub(r'(id="legend_low".*?fill=")#[0-9a-fA-F]{6}"', r'\g<1>' + theme['low'] + '"', svg)
+    svg = re.sub(r'(id="legend_med".*?fill=")#[0-9a-fA-F]{6}"', r'\g<1>' + theme['med'] + '"', svg)
+    svg = re.sub(r'(id="legend_high".*?fill=")#[0-9a-fA-F]{6}"', r'\g<1>' + theme['high'] + '"', svg)
+
     for i, lang in enumerate(data['langs']):
         idx = i + 1
         width = int((lang["percent"] / 100) * 250) if lang["percent"] > 0 else 0
@@ -123,8 +150,9 @@ def update_svg(data):
         svg = re.sub(fr'(id="lang_{idx}_name".*?>)[^<]*(</text>)', fr'\g<1>{lang["name"]}\g<2>', svg)
         svg = re.sub(fr'(id="lang_{idx}_percent".*?>)[^<]*(</text>)', fr'\g<1>{lang["percent"]}%\g<2>', svg)
         svg = re.sub(fr'(id="lang_{idx}_bar".*?width=")\d+(")', fr'\g<1>{width}\g<2>', svg)
-
-    svg = re.sub(r'(id="total_count".*?>)0(</text>)', fr'\g<1>{data["total"]}\g<2>', svg)
+        
+    svg = re.sub(r'(id="total_count".*?>)\d+(</text>)', fr'\g<1>{data["total"]}\g<2>', svg)
+    svg = re.sub(r'(id="streak_count".*?>)\d+(</text>)', fr'\g<1>{data["streak"]}\g<2>', svg)
     
     current_month = now.strftime('%B %Y')
     footer_text = f"Automated Dashboard • Resets Monthly: {current_month}"
