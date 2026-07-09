@@ -35,32 +35,32 @@
 
     <g transform="translate(0, 45)">
       <text id="lang_1_name"    x="0"   y="0" fill="white"   font-family="Arial" font-size="15" font-weight="bold">JavaScript</text>
-      <text id="lang_1_percent" x="250" y="0" fill="#8b949e" font-family="Arial" font-size="12" text-anchor="end">13%</text>
-      <rect x="0" y="10" width="250" height="6" rx="3" fill="#21262d"/><rect id="lang_1_bar" x="0" y="10" width="32" height="6" rx="3" fill="#f7df1e"/>
+      <text id="lang_1_percent" x="250" y="0" fill="#8b949e" font-family="Arial" font-size="12" text-anchor="end">20%</text>
+      <rect x="0" y="10" width="250" height="6" rx="3" fill="#21262d"/><rect id="lang_1_bar" x="0" y="10" width="50" height="6" rx="3" fill="#f7df1e"/>
     </g>
 
     <g transform="translate(0, 95)">
       <text id="lang_2_name"    x="0"   y="0" fill="white"   font-family="Arial" font-size="15" font-weight="bold">TypeScript</text>
-      <text id="lang_2_percent" x="250" y="0" fill="#8b949e" font-family="Arial" font-size="12" text-anchor="end">50%</text>
-      <rect x="0" y="10" width="250" height="6" rx="3" fill="#21262d"/><rect id="lang_2_bar" x="0" y="10" width="125" height="6" rx="3" fill="#3178c6"/>
+      <text id="lang_2_percent" x="250" y="0" fill="#8b949e" font-family="Arial" font-size="12" text-anchor="end">22%</text>
+      <rect x="0" y="10" width="250" height="6" rx="3" fill="#21262d"/><rect id="lang_2_bar" x="0" y="10" width="55" height="6" rx="3" fill="#3178c6"/>
     </g>
 
     <g transform="translate(0, 145)">
       <text id="lang_3_name"    x="0"   y="0" fill="white"   font-family="Arial" font-size="15" font-weight="bold">Python</text>
-      <text id="lang_3_percent" x="250" y="0" fill="#8b949e" font-family="Arial" font-size="12" text-anchor="end">2%</text>
-      <rect x="0" y="10" width="250" height="6" rx="3" fill="#21262d"/><rect id="lang_3_bar" x="0" y="10" width="5" height="6" rx="3" fill="#3776ab"/>
+      <text id="lang_3_percent" x="250" y="0" fill="#8b949e" font-family="Arial" font-size="12" text-anchor="end">4%</text>
+      <rect x="0" y="10" width="250" height="6" rx="3" fill="#21262d"/><rect id="lang_3_bar" x="0" y="10" width="10" height="6" rx="3" fill="#3776ab"/>
     </g>
 
     <g transform="translate(0, 195)">
       <text id="lang_4_name"    x="0"   y="0" fill="white"   font-family="Arial" font-size="15" font-weight="bold">HTML/CSS</text>
-      <text id="lang_4_percent" x="250" y="0" fill="#8b949e" font-family="Arial" font-size="12" text-anchor="end">33%</text>
-      <rect x="0" y="10" width="250" height="6" rx="3" fill="#21262d"/><rect id="lang_4_bar" x="0" y="10" width="82" height="6" rx="3" fill="#e34c26"/>
+      <text id="lang_4_percent" x="250" y="0" fill="#8b949e" font-family="Arial" font-size="12" text-anchor="end">51%</text>
+      <rect x="0" y="10" width="250" height="6" rx="3" fill="#21262d"/><rect id="lang_4_bar" x="0" y="10" width="127" height="6" rx="3" fill="#e34c26"/>
     </g>
 
     <g transform="translate(0, 245)">
       <text id="lang_5_name"    x="0"   y="0" fill="white"   font-family="Arial" font-size="15" font-weight="bold">Other</text>
-      <text id="lang_5_percent" x="250" y="0" fill="#8b949e" font-family="Arial" font-size="12" text-anchor="end">2%</text>
-      <rect x="0" y="10" width="250" height="6" rx="3" fill="#21262d"/><rect id="lang_5_bar" x="0" y="10" width="5" height="6" rx="3" fill="#6e7681"/>
+      <text id="lang_5_percent" x="250" y="0" fill="#8b949e" font-family="Arial" font-size="12" text-anchor="end">3%</text>
+      <rect x="0" y="10" width="250" height="6" rx="3" fill="#21262d"/><rect id="lang_5_bar" x="0" y="10" width="7" height="6" rx="3" fill="#6e7681"/>
     </g>
 
     <line x1="0" y1="290" x2="250" y2="290" stroke="#30363d" stroke-width="1"/>
@@ -68,7 +68,7 @@
     <g transform="translate(0, 325)">
       <text x="0"   y="0" fill="#8b949e" font-family="Arial" font-size="13">Contributions</text>
       <text x="130" y="0" fill="#8b949e" font-family="Arial" font-size="13">Streak</text>
-      <text id="total_count"  x="0"   y="44" fill="white" font-family="Arial" font-size="46" font-weight="bold">90</text>
+      <text id="total_count"  x="0"   y="44" fill="white" font-family="Arial" font-size="46" font-weight="bold">91</text>
       <text id="streak_count" x="130" y="44" fill="white" font-family="Arial" font-size="46" font-weight="bold">4</text>
       <text x="130" y="60" fill="#8b949e" font-family="Arial" font-size="11">days</text>
     </g>
