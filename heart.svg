@@ -69,7 +69,7 @@
       <text x="0"   y="0" fill="#8b949e" font-family="Arial" font-size="13">Contributions</text>
       <text x="130" y="0" fill="#8b949e" font-family="Arial" font-size="13">Streak</text>
       <text id="total_count"  x="0"   y="44" fill="white" font-family="Arial" font-size="46" font-weight="bold">268</text>
-      <text id="streak_count" x="130" y="44" fill="white" font-family="Arial" font-size="46" font-weight="bold">10</text>
+      <text id="streak_count" x="130" y="44" fill="white" font-family="Arial" font-size="46" font-weight="bold">0</text>
       <text x="130" y="60" fill="#8b949e" font-family="Arial" font-size="11">days</text>
     </g>
   </g>
