@@ -16,7 +16,7 @@
 
     <rect id="day_21" x="42"  y="126" width="36" height="36" rx="8" fill="#f59e0b"/><rect id="day_22" x="84"  y="126" width="36" height="36" rx="8" fill="#f59e0b"/><rect id="day_23" x="126" y="126" width="36" height="36" rx="8" fill="#f59e0b"/><rect id="day_24" x="168" y="126" width="36" height="36" rx="8" fill="#f59e0b"/><rect id="day_25" x="210" y="126" width="36" height="36" rx="8" fill="#3d3014"/><rect id="day_26" x="252" y="126" width="36" height="36" rx="8" fill="#3d3014"/>
 
-    <rect id="day_27" x="84"  y="168" width="36" height="36" rx="8" fill="#3d3014"/><rect id="day_28" x="126" y="168" width="36" height="36" rx="8" fill="#1e1e1e"/><rect id="day_29" x="168" y="168" width="36" height="36" rx="8" fill="#1e1e1e"/><rect id="day_30" x="210" y="168" width="36" height="36" rx="8" fill="#1e1e1e"/>
+    <rect id="day_27" x="84"  y="168" width="36" height="36" rx="8" fill="#3d3014"/><rect id="day_28" x="126" y="168" width="36" height="36" rx="8" fill="#3d3014"/><rect id="day_29" x="168" y="168" width="36" height="36" rx="8" fill="#1e1e1e"/><rect id="day_30" x="210" y="168" width="36" height="36" rx="8" fill="#1e1e1e"/>
 
     <rect id="day_31" x="147" y="210" width="36" height="36" rx="8" fill="#1e1e1e"/>
   </g>
@@ -68,8 +68,8 @@
     <g transform="translate(0, 325)">
       <text x="0"   y="0" fill="#8b949e" font-family="Arial" font-size="13">Contributions</text>
       <text x="130" y="0" fill="#8b949e" font-family="Arial" font-size="13">Streak</text>
-      <text id="total_count"  x="0"   y="44" fill="white" font-family="Arial" font-size="46" font-weight="bold">320</text>
-      <text id="streak_count" x="130" y="44" fill="white" font-family="Arial" font-size="46" font-weight="bold">0</text>
+      <text id="total_count"  x="0"   y="44" fill="white" font-family="Arial" font-size="46" font-weight="bold">321</text>
+      <text id="streak_count" x="130" y="44" fill="white" font-family="Arial" font-size="46" font-weight="bold">17</text>
       <text x="130" y="60" fill="#8b949e" font-family="Arial" font-size="11">days</text>
     </g>
   </g>
