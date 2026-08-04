@@ -107,6 +107,8 @@ def fetch_github_data(token, username):
 
     # Streak: only look at days up to today, walk backwards
     actual_days = daily_counts[:now.day]
+    if actual_days and actual_days[-1] == 0:
+        actual_days = actual_days[:-1]
     streak = 0
     for count in reversed(actual_days):
         if count > 0:
